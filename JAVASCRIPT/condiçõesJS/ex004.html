@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfândega</title>
+</head>
+<body>
+    <h1>Sistema de Imigração</h1>
+    Digite seu país de origem: <input type="text" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+        
+    </div>
+
+
+    <script>
+        var txtv = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+
+        function calcular() {
+            var texto = txtv.value
+            res.innerHTML = `<p><strong> Você nasceu no ${texto}.</strong></p>` 
+
+            if( texto == 'Brasil' ) {res.innerHTML += `<p><strong>Opa é Brasileiro! Bem-vindo de volta! </strong></p>`} else{res.innerHTML += `<p><strong>Opa é um Estrangeiro. Seja Bem-Vindo ao nosso país.</strong></p>` }      
+        }
+    </script>
+    
+</body>
+</html>
